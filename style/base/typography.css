@@ -52,6 +52,12 @@ body {
 }
 
 .text--temp {
-  font-size: 9rem;
+  font-size: 7rem;
   font-weight: 700;
+}
+
+.text--wind-speed,
+.text--humidity {
+  color: var(--color-secondary);
+  font-size: 1.7rem;
 }
