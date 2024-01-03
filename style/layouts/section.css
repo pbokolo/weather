@@ -6,3 +6,7 @@
   grid-template-rows: repeat(10, 1fr);
   gap: 1rem;
 }
+.card {
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
