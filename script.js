@@ -72,4 +72,4 @@ function renderForecast({ temp, windSpeed, humidity }) {
 
 displayTime();
 
-// getGeoCoords();
+getGeoCoords();
