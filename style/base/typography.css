@@ -42,3 +42,16 @@ body {
 .text--owner:visited {
   color: var(--color-white);
 }
+
+.text--title-main-weather {
+  font-size: 1.6rem;
+}
+
+.text--time-main-weather {
+  font-size: 1.2rem;
+}
+
+.text--temp {
+  font-size: 9rem;
+  font-weight: 700;
+}

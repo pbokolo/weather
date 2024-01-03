@@ -11,7 +11,7 @@
 
 .card__header {
   padding: 1rem;
-  background-color: var(--color-surface-background);
+  border-bottom: 0.25rem solid var(--color-main-background);
 }
 
 .card__body {
