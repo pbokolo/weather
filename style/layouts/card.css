@@ -1,0 +1,24 @@
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 1rem;
+  background-color: var(--color-surface-background);
+}
+
+.card__header {
+  padding: 1rem;
+  background-color: var(--color-surface-background);
+}
+
+.card__body {
+  height: 100%;
+}
+
+.card__weather--main {
+  width: 30rem;
+  height: 40rem;
+}
