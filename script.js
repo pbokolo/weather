@@ -1,6 +1,10 @@
 "use strict";
 
+const API = "";
 const today = new Date();
+
+let position = [];
+
 const timeLbl = document.querySelector(".text--time-main-weather");
 
 function displayTime() {
@@ -14,16 +18,33 @@ function displayTime() {
   )}`;
 }
 
-function getGeoCoords() {
+function handleCoords(position) {
+  /*const { latitude, longitude } = position.coords;
+  //   console.log(latitude, longitude);
+  position = [latitude, longitude];
+  console.log(position);*/
+  getForecast(position.coords);
+}
+
+async function getGeoCoords() {
   navigator.geolocation.getCurrentPosition(
-    (position) => {
-      const { latitude, longitude } = position.coords;
-      console.log(latitude, longitude);
-    },
+    (position) => handleCoords(position),
     (faillure) => {
-      console.log(faillure);
+      //   console.log(faillure);
+      throw new Error(faillure);
     }
   );
+}
+
+async function getForecast({ latitude, longitude }) {
+  try {
+    const result = await fetch(
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`
+    );
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 displayTime();
