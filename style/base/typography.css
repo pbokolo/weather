@@ -30,8 +30,8 @@ body {
   clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
   background-image: linear-gradient(
     to right bottom,
-    var(--color-black),
-    var(--color-black--dark)
+    var(--color-black--dark),
+    var(--color-black--light)
   );
   cursor: pointer;
   padding: 0.5rem 1rem;
