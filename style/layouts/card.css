@@ -13,6 +13,9 @@
 .card__header {
   padding: 1rem;
   border-bottom: 0.25rem solid var(--color-main-background);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .card__body {
